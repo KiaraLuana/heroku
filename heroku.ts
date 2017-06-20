@@ -34,12 +34,16 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
 
     //URL QUERY & OUTPUT
     let query: AssocStringString = Url.parse(_request.url, true).query;
-    //    let selection: string;
+    let selection: string = "";
 
-    //  selection = query["Vanilla+"];
+    if (query["Vanilla "] != "0")
+        selection += query["Vanilla "] + " Kugeln Vanille, ";
+
+    if (query["Chocolate "] != "0")
+        selection += query["Chocolate "] + " Kugeln Schoko, ";
 
     _response.write("Hello " + query["Name"] + ", <br> Your order has been submitted! <br><br>");
-    _response.write("Vanille: " + query["Vanilla "] + " Kugeln");
+    _response.write("Bestellung: " + selection);
 
     _response.end("</body></html>");
 }
