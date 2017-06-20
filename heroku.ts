@@ -34,9 +34,9 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
 
     //URL QUERY & OUTPUT
     let query: AssocStringString = Url.parse(_request.url, true).query;
-    let address: string = "" + query["Vorname"] + " " + query["Nachname"] + " in " + query["Strasse"] + ", " + query["PLZ"] + " " + query["Ort"];
-    _response.write("Junkie " + query["Vorname"] + ", <br> Vielen Dank für die Bestellung! <br><br>");
-    _response.write("Die Bestellung wird an " + address + " gesendet.  <br>Viel Spass damit!");
+  
+    _response.write("Hallo " + query["Name"] + ", <br> Vielen Dank für die Bestellung! <br><br>");
+   
 
     _response.end("</body></html>");
 }
