@@ -54,7 +54,7 @@ function handleRequest(_request, _response) {
         selection += query["Hazelnut "] + " scoop(s) of Hazelnut <br>";
     _response.write("Hello " + query["Name"] + ", <br> Your order has been submitted! <br><br>");
     _response.write("Your order: <br><br>" + selection);
-    _response.write("<br>Your delivery data: <br><br> Street: ", query["Street"]);
+    _response.write("<br>Your delivery data: <br><br>" + query["Street"]);
     _response.end("</body></html>");
 }
 //# sourceMappingURL=heroku.js.map
