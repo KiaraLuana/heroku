@@ -55,7 +55,7 @@ function handleRequest(_request, _response) {
     _response.write("Hello " + query["Name"] + ", <br> Your order has been submitted! <br><br>");
     _response.write("Your order: <br><br>" + selection);
     _response.write("<br><br>Your delivery data: <br><br>Street: " + query["Street"]
-        + "<br>Location: " + query["Location"]);
+        + "<br>Location: " + query["Location"] + "<br>Delivery option: " + query["Options"]);
     _response.end("</body></html>");
 }
 //# sourceMappingURL=heroku.js.map
