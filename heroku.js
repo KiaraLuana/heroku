@@ -54,7 +54,7 @@ function handleRequest(_request, _response) {
         selection += query["Almond "] + " scoop(s) of Almond <br>";
     if (query["Hazelnut "] != "0")
         selection += query["Hazelnut "] + " scoop(s) of Hazelnut <br>";
-    _response.write("Thank you " + query["Name"] + ". <br> Your order has been submitted! <br><br>");
+    _response.write("Thank you, " + query["Name"] + "! <br> Your order has been submitted! <br><br>");
     _response.write("Your order: <br><br>" + selection + top);
     _response.write("<br><br><br>Your delivery data: <br><br>Name: " + query["Name"] + "<br>Street: " + query["Street"]
         + "<br>Location: " + query["Location"] + "<br>Delivery option: " + query["Options"]);
