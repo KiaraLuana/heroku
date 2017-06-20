@@ -25,11 +25,13 @@ function handleRequest(_request, _response) {
     let query = Url.parse(_request.url, true).query;
     let selection = "";
     if (query["Vanilla "] != "0")
-        selection += query["Vanilla "] + " Kugeln Vanille, ";
+        selection += query["Vanilla "] + " scoop(s) of Vanilla, ";
     if (query["Chocolate "] != "0")
-        selection += query["Chocolate "] + " Kugeln Schoko, ";
+        selection += query["Chocolate "] + " scoop(s) of Chocolate, ";
+    if (query["Stracciattela "] != "0")
+        selection += query["Stracciatella "] + " scoop(s) of Stracciattela, ";
     _response.write("Hello " + query["Name"] + ", <br> Your order has been submitted! <br><br>");
-    _response.write("Bestellung: " + selection);
+    _response.write("Your order: " + selection);
     _response.end("</body></html>");
 }
 //# sourceMappingURL=heroku.js.map
