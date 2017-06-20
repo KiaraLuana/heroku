@@ -80,6 +80,6 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
 
     _response.write("Hello " + query["Name"] + ", <br> Your order has been submitted! <br><br>");
     _response.write("Your order: <br><br>" + selection);
-
+    _response.write("Your delivery data: <br><br> " + query["Street"]);
     _response.end("</body></html>");
 }
