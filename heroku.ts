@@ -40,7 +40,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
         selection += query["Vanilla "] + " scoop(s) of Vanilla, ";
 
     if (query["Chocolate "] != "0")
-        selection += query["Chocolate "] + " scoop(s) of Chocolate, ";
+        selection += query["Chocolate "] + " scoop(s) of Chocolate, <br>";
 
     if (query["Stracciattela "] != "0")
         selection += query["Stracciatella "] + " scoop(s) of Stracciattela, ";

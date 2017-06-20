@@ -27,7 +27,7 @@ function handleRequest(_request, _response) {
     if (query["Vanilla "] != "0")
         selection += query["Vanilla "] + " scoop(s) of Vanilla, ";
     if (query["Chocolate "] != "0")
-        selection += query["Chocolate "] + " scoop(s) of Chocolate, ";
+        selection += query["Chocolate "] + " scoop(s) of Chocolate, <br>";
     if (query["Stracciattela "] != "0")
         selection += query["Stracciatella "] + " scoop(s) of Stracciattela, ";
     _response.write("Hello " + query["Name"] + ", <br> Your order has been submitted! <br><br>");
