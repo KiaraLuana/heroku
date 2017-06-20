@@ -24,7 +24,7 @@ function handleRequest(_request, _response) {
     //URL QUERY & OUTPUT
     let query = Url.parse(_request.url, true).query;
     let selection;
-    selection = query["Vanilla"];
+    selection = query["Vanilla+"];
     _response.write("Hallo " + query["Name"] + ", <br> Vielen Dank für die Bestellung! <br><br>");
     _response.write(selection);
     _response.end("</body></html>");
