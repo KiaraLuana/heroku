@@ -28,8 +28,8 @@ function handleRequest(_request, _response) {
         selection += query["Vanilla "] + " scoop(s) of Vanilla <br>";
     if (query["Chocolate "] != "0")
         selection += query["Chocolate "] + " scoop(s) of Chocolate <br>";
-    if (query["Stracciattela "] != "0")
-        selection += query["Stracciatella "] + " scoop(s) of Stracciattela <br>";
+    if (query["Stracciatella "] != "0")
+        selection += query["Stracciatella "] + " scoop(s) of Stracciatella <br>";
     if (query["Pistachio "] != "0")
         selection += query["Pistachio "] + " scoop(s) of Pistachio <br>";
     if (query["Cinnamon "] != "0")
