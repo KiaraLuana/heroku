@@ -35,11 +35,11 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     //URL QUERY & OUTPUT
     let query: AssocStringString = Url.parse(_request.url, true).query;
     //    let selection: string;
-   // console.log(query);
+
     //  selection = query["Vanilla+"];
 
-    _response.write("Hallo " + query["Name"] + ", <br> Vielen Dank für die Bestellung! <br><br>");
-    _response.write("Vanille: " + query["Vanilla"] + " Kugeln");
+    _response.write("Hello " + query["Name"] + ", <br> Your order has been submitted! <br><br>");
+    _response.write("Vanille: " + query["Vanilla "] + " Kugeln");
 
     _response.end("</body></html>");
 }
