@@ -21,5 +21,22 @@ function handleListen(): void {
 }
 
 function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
-  //
+    console.log("Request received");
+    console.log(_request.url);
+    _response.setHeader("Access-Control-Allow-Origin", "*");
+    _response.setHeader("content-type", "text/html; charset=utf-8");
+
+    //HTML DOCUMENT & STYLE
+    _response.write("<html>");
+    _response.write("<head> <link rel='stylesheet' type='text/css' href='style.css'> </head>");
+    _response.write("<body>");
+
+
+    //URL QUERY & OUTPUT
+    let query: AssocStringString = Url.parse(_request.url, true).query;
+    let address: string = "" + query["Vorname"] + " " + query["Nachname"] + " in " + query["Strasse"] + ", " + query["PLZ"] + " " + query["Ort"];
+    _response.write("Junkie " + query["Vorname"] + ", <br> Vielen Dank für die Bestellung! <br><br>");
+    _response.write("Die Bestellung wird an " + address + " gesendet.  <br>Viel Spass damit!");
+
+    _response.end("</body></html>");
 }
