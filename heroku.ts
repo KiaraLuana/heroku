@@ -79,7 +79,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
         selection += query["Hazelnut "] + " scoop(s) of Hazelnut <br>";
 
     _response.write("Hello " + query["Name"] + ", <br> Your order has been submitted! <br><br>");
-    _response.write("Your order: <br>" + selection);
+    _response.write("Your order: <br><br>" + selection);
 
     _response.end("</body></html>");
 }
