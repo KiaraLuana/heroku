@@ -35,9 +35,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     //URL QUERY & OUTPUT
     let query: AssocStringString = Url.parse(_request.url, true).query;
     let selection: string = "";
-    let top: string = "";
-    
-    top += query["Whipped Cream "];
+ 
 
     if (query["Vanilla "] != "0")
         selection += query["Vanilla "] + " scoop(s) of Vanilla <br>";
@@ -82,7 +80,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
         selection += query["Hazelnut "] + " scoop(s) of Hazelnut <br>";
 
     _response.write("Thank you, " + query["Name"] + "! <br> Your order has been submitted! <br><br>");
-    _response.write("Your order: <br><br>" + selection + top);
+    _response.write("Your order: <br><br>" + selection);
     _response.write("<br><br><br>Your delivery data: <br><br>Name: " + query["Name"] + "<br>Street: " + query["Street"] 
     + "<br>Location: " + query["Location"] + "<br>Delivery option: " + query["Options"]);
     _response.end("</body></html>");
