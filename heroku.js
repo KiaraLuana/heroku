@@ -26,7 +26,7 @@ function handleRequest(_request, _response) {
     //    let selection: string;
     //  selection = query["Vanilla+"];
     _response.write("Hallo " + query["Name"] + ", <br> Vielen Dank für die Bestellung! <br><br>");
-    _response.write("Vanille: " + query["Vanilla+"] + " Kugeln");
+    _response.write("Vanille: " + query["Vanilla"] + " Kugeln");
     _response.end("</body></html>");
 }
 //# sourceMappingURL=heroku.js.map
