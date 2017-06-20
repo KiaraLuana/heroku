@@ -83,7 +83,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
 
     _response.write("Hello " + query["Name"] + ", <br> Your order has been submitted! <br><br>");
     _response.write("Your order: <br><br>" + selection + top);
-    _response.write("<br><br>Your delivery data: <br><br>Street: " + query["Street"] 
+    _response.write("<br><br>Your delivery data: <br><br>Name: " + query["Name"] + "<br>Street: " + query["Street"] 
     + "<br>Location: " + query["Location"] + "<br>Delivery option: " + query["Options"]);
     _response.end("</body></html>");
 }
