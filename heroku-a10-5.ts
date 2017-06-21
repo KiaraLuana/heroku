@@ -105,7 +105,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     if (query["Couverture "] == "on")
         top += "with couverture<br>";
     
-    //Container
+    //Container - Funktioniert noch nicht korrekt
     
     if (query["Cone "] != "off")
         top += "served in a cone<br>";

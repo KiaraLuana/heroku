@@ -72,7 +72,7 @@ function handleRequest(_request, _response) {
         top += "with brittle<br>";
     if (query["Couverture "] == "on")
         top += "with couverture<br>";
-    //Container
+    //Container - Funktioniert noch nicht korrekt
     if (query["Cone "] != "off")
         top += "served in a cone<br>";
     if (query["Bowl "] != "off")
