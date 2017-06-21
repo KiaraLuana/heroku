@@ -1,3 +1,15 @@
+/*
+Aufgabe: Aufgabe 10 - ClientServer
+Name: Kiara Luana Oßwald
+Matrikel: 254140
+Datum: 21.06.2017
+    
+Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
+
+Dieser Code wurde mit der Hilfe von Moritz Giuliani erstellt.
+*/
+
+
 console.log("Server starting");
 
 import Http = require("http");
