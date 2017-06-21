@@ -67,4 +67,4 @@ function handleRequest(_request, _response) {
         + "<br>Location: " + query["Location"] + "<br>Delivery option: " + query["Options"]);
     _response.end("</body></html>");
 }
-//# sourceMappingURL=heroku.js.map
+//# sourceMappingURL=heroku-10-4.js.map
