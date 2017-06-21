@@ -85,11 +85,11 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     
     //Toppings
     
-    if (query["Whipped Cream "] == "on")
+    if (query["Whipped Cream "] != "on")
         top += "with whipped cream<br>";
-    if (query["Brittle "] == "on")
+    if (query["Brittle "] != "on")
         top += "with brittle<br>";
-    if (query["Couverture "] == "on")
+    if (query["Couverture "] != "on")
         top += "with couverture<br>";
     
     _response.write("Thank you, " + query["Name"] + "! <br> Your order has been submitted! <br><br>");
