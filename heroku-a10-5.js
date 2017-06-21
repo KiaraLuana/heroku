@@ -80,7 +80,7 @@ function handleRequest(_request, _response) {
     if (query["Brittle Cone "] != "off")
         top += "served in a brittle cone<br>";
     _response.write("Thank you, " + query["Name"] + "! <br> Your order has been submitted! <br><br>");
-    _response.write("<br>Your order: <br><br>" + selection + top);
+    _response.write("<br>Your order: <br><br>" + selection + top + contain);
     _response.write("<br><br><br>Your delivery data: <br><br>Name: " + query["Name"] + "<br>Street: " + query["Street"]
         + "<br>Location: " + query["Location"] + "<br>Delivery option: " + query["Options"]);
     _response.end("</body></html>");
