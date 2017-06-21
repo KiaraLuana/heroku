@@ -3,9 +3,9 @@
 	"version" : "0.0.1",
 	"description" : "enter a description of the project here",
 	"author" : "Kiara Oßwald",
-	"main" : "heroku-10-5.js",
+	"main" : "heroku-a10-5.js",
 	"scripts" : {
-		"start" : "node heroku-10-5.js"
+		"start" : "node heroku-a10-5.js"
 	},
 	"engines" : {
 		"node" : "5.8.0"
