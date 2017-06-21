@@ -25,6 +25,7 @@ function handleRequest(_request, _response) {
     let query = Url.parse(_request.url, true).query;
     let selection = "";
     let top = "";
+    let contain = "";
     //Eissorten
     if (query["Vanilla "] != "0")
         selection += query["Vanilla "] + " scoop(s) of Vanilla <br>";
@@ -61,8 +62,15 @@ function handleRequest(_request, _response) {
         top += "with brittle<br>";
     if (query["Couverture "] == "on")
         top += "with couverture<br>";
+    //Container
+    if (query["Cone "] == "on")
+        top += "served in a cone<br>";
+    if (query["Bowl "] == "on")
+        top += "served in a bowl<br>";
+    if (query["Brittle Cone "] == "on")
+        top += "served in a brittle cone<br>";
     _response.write("Thank you, " + query["Name"] + "! <br> Your order has been submitted! <br><br>");
-    _response.write("<br>Your order: <br><br>" + selection + top + "served in a ");
+    _response.write("<br>Your order: <br><br>" + selection + top);
     _response.write("<br><br><br>Your delivery data: <br><br>Name: " + query["Name"] + "<br>Street: " + query["Street"]
         + "<br>Location: " + query["Location"] + "<br>Delivery option: " + query["Options"]);
     _response.end("</body></html>");

@@ -36,6 +36,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     let query: AssocStringString = Url.parse(_request.url, true).query;
     let selection: string = "";
     let top: string = "";
+    let contain: string = "";
  
 
     //Eissorten
@@ -92,8 +93,17 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     if (query["Couverture "] == "on")
         top += "with couverture<br>";
     
+    //Container
+    
+    if (query["Cone "] == "on")
+        top += "served in a cone<br>";
+    if (query["Bowl "] == "on")
+        top += "served in a bowl<br>";
+    if (query["Brittle Cone "] == "on")
+        top += "served in a brittle cone<br>";
+    
     _response.write("Thank you, " + query["Name"] + "! <br> Your order has been submitted! <br><br>");
-    _response.write("<br>Your order: <br><br>" + selection + top + "served in a ");
+    _response.write("<br>Your order: <br><br>" + selection + top);
     _response.write("<br><br><br>Your delivery data: <br><br>Name: " + query["Name"] + "<br>Street: " + query["Street"] 
     + "<br>Location: " + query["Location"] + "<br>Delivery option: " + query["Options"]);
     _response.end("</body></html>");
