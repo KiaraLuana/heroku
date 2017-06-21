@@ -55,11 +55,11 @@ function handleRequest(_request, _response) {
     if (query["Hazelnut "] != "0")
         selection += query["Hazelnut "] + " scoop(s) of Hazelnut <br>";
     //Toppings
-    if (query["Whipped Cream "] != "off")
+    if (query["Whipped Cream "] == "on")
         top += "with whipped cream<br>";
-    if (query["Brittle "] != "off")
+    if (query["Brittle "] == "on")
         top += "with brittle<br>";
-    if (query["Couverture "] != "off")
+    if (query["Couverture "] == "on")
         top += "with couverture<br>";
     _response.write("Thank you, " + query["Name"] + "! <br> Your order has been submitted! <br><br>");
     _response.write("<br>Your order: <br><br>" + selection + top);
