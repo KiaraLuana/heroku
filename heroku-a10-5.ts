@@ -107,11 +107,11 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     
     //Container
     
-    if (query["Cone "] != "on")
+    if (query["Cone "] == "on")
         contain += "served in a cone<br>";
-    if (query["Bowl "] != "on")
+    if (query["Bowl "] == "on")
         contain += "served in a bowl<br>";
-    if (query["Brittle Cone "] != "on")
+    if (query["Brittle Cone "] == "on")
         contain += "served in a brittle cone<br>";
     
     _response.write("Thank you, " + query["Name"] + "! <br> Your order has been submitted! <br><br>");
