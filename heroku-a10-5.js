@@ -72,13 +72,13 @@ function handleRequest(_request, _response) {
         top += "with brittle<br>";
     if (query["Couverture "] == "on")
         top += "with couverture<br>";
-    //Container - Funktioniert noch nicht korrekt
+    //Container
     if (query["Cone "] != "off")
-        top += "served in a cone<br>";
+        contain += "served in a cone<br>";
     if (query["Bowl "] != "off")
-        top += "served in a bowl<br>";
+        contain += "served in a bowl<br>";
     if (query["Brittle Cone "] != "off")
-        top += "served in a brittle cone<br>";
+        contain += "served in a brittle cone<br>";
     _response.write("Thank you, " + query["Name"] + "! <br> Your order has been submitted! <br><br>");
     _response.write("<br>Your order: <br><br>" + selection + top + contain);
     _response.write("<br><br><br>Your delivery data: <br><br>Name: " + query["Name"] + "<br>Street: " + query["Street"]

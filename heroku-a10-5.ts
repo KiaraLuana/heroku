@@ -105,14 +105,14 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     if (query["Couverture "] == "on")
         top += "with couverture<br>";
     
-    //Container - Funktioniert noch nicht korrekt
+    //Container
     
     if (query["Cone "] != "off")
-        top += "served in a cone<br>";
+        contain += "served in a cone<br>";
     if (query["Bowl "] != "off")
-        top += "served in a bowl<br>";
+        contain += "served in a bowl<br>";
     if (query["Brittle Cone "] != "off")
-        top += "served in a brittle cone<br>";
+        contain += "served in a brittle cone<br>";
     
     _response.write("Thank you, " + query["Name"] + "! <br> Your order has been submitted! <br><br>");
     _response.write("<br>Your order: <br><br>" + selection + top + contain);
