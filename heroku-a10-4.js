@@ -22,7 +22,7 @@ function handleRequest(_request, _response) {
         console.log(key + ":" + query[key]);
     _response.setHeader("Access-Control-Allow-Origin", "*");
     _response.setHeader("content-type", "text/html; charset=utf-8");
-    _response.write("Ich höre Stimmen!");
+    _response.write("Ich höre Stimmen!" + query[key]);
     _response.end();
 }
 //# sourceMappingURL=heroku-a10-4.js.map
